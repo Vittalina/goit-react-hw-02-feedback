@@ -1,18 +1,9 @@
-// import { Box } from 'components/Box';
+import { Box } from 'components/Box';
 
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
+    <Box p={50} px as="main">
       React homework template
-    </div>
+    </Box>
   );
 };
