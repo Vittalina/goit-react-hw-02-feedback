@@ -15,18 +15,8 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 };
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.objectOf(PropTypes.number),
+  options: PropTypes.arrayOf(PropTypes.string),
   onLeaveFeedback: PropTypes.func.isRequired,
 };
 
 export default FeedbackOptions;
-
-//   onLeaveFeedback = (option)=> {
-// [option]: state[option] + 1;
-//   };
-
-// () => onLeaveFeedback(label);
-// example {good: good + 1}
-// {[option]: state[option] + 1}
-
-// key='' для button ???

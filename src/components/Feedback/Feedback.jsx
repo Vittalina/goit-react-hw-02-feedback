@@ -37,15 +37,17 @@ class Feedback extends Component {
           />
         </Section>
         <Section title="Statistics">
-          <Statistics
-            good={this.state.good}
-            neutral={this.state.neutral}
-            bad={this.state.bad}
-            total={this.countTotal()}
-            positivePercentage={this.countPositivePercentage()}
-          />
-
-          <Notification message="There is no feedback" />
+          {this.countTotal() ? (
+            <Statistics
+              good={this.state.good}
+              neutral={this.state.neutral}
+              bad={this.state.bad}
+              total={this.countTotal()}
+              positivePercentage={this.countPositivePercentage()}
+            />
+          ) : (
+            <Notification message="There is no feedback" />
+          )}
         </Section>
       </div>
     );
